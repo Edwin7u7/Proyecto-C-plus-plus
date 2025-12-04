@@ -54,6 +54,8 @@ El usuario podrá:
 -Sala
 -Asiento
 -Boleto
+-Vip
+-Estandar
 
 
 
