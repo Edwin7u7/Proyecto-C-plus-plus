@@ -34,16 +34,21 @@ public:
     string getDireccion() const { return direccion; }
 
     //Metodos
-    void mostrarPeliculas() const{
-        cout << "Cartelera:\n"; 
+    
+    void mostrarPeliculas() {
+        cout <<"====================";
+        cout << "    Cartelera:\n"; 
+        cout <<"====================";
         for (size_t i = 0; i < peliculas.size(); ++i) {
             peliculas[i].mostrarPelicula();
             cout << "-----------------------------\n";
         }
     }
 
-    void mostrarFunciones() const{
-        cout << "Funciones:\n"; 
+    void mostrarFunciones() {
+        cout <<"====================";
+        cout << "   Funciones:\n"; 
+        cout <<"====================";
         for (size_t i = 0; i < funciones.size(); ++i) {
             funciones[i].mostrarFuncion();
             cout << "-----------------------------\n";
@@ -57,6 +62,16 @@ public:
     void agregarFuncion(Funcion f) {
         funciones.push_back(f);
     }
+
+    Funcion seleccionarFuncionById(int idFuncion){
+        for(size_t i = 0; i < funciones.size(); i++){
+            if(idFuncion == funciones[i].getId()){
+                return funciones[i];
+            }
+        }
+        return Funcion();
+    }
+    
 };
 
 #endif
