@@ -15,16 +15,23 @@ class Funcion{
         //Constructores
         Funcion(){}
         Funcion(
-            int id_funcion,
+            int idFuncion,
             Pelicula pelicula,
             string horario,
             Sala sala
         ):idFuncion(idFuncion), pelicula(pelicula),horario(horario),sala(sala)
         {}
-        //GETTERS
+        //Getters
         
         string getHorario() const { return horario; }
+        Pelicula getPelicula() {return pelicula;}
         int getId() const {return idFuncion;}
+        //Se agregaron dos metodos nombrados de la misma forma
+        // - Versión no-const: permite modificar la sala (ocupar asientos, etc.)
+        // - Versión const: permite consultar la sala sin modificarla
+        Sala& getSala() { return sala; } 
+        const Sala& getSala() const { return sala; }
+
         //Metodos
         void mostrarFuncion()  {
         cout <<"Id: " <<idFuncion<<"\n";

@@ -12,7 +12,7 @@ class Cine
 {
 private:
     int id;
-    string nombre_cine;
+    string nombre;
     string direccion;
     vector<Funcion> funciones;
     vector<Pelicula> peliculas;
@@ -21,20 +21,20 @@ public:
     Cine(){}
     Cine(
         int id, 
-        string nombre_cine, 
+        string nombre, 
         string direccion     
     ):
 
-        id(id), nombre_cine(nombre_cine), direccion(direccion)
+        id(id), nombre(nombre), direccion(direccion)
         {}
     
-    // GETTERS
-    int getId() const { return id; }
-    string getNombre() const { return nombre_cine; }
-    string getDireccion() const { return direccion; }
+    //Getters
+    
+    string getNombre() const { return nombre; }
+    
 
     //Metodos
-    
+    //Este metodo muestra las peliculas que estan en el vector 
     void mostrarPeliculas() {
         cout <<"====================";
         cout << "    Cartelera:\n"; 
@@ -44,25 +44,25 @@ public:
             cout << "-----------------------------\n";
         }
     }
-
+    //Este metodo muestra las funciones que estan en el vector 
     void mostrarFunciones() {
-        cout <<"====================";
+        cout <<"====================\n";
         cout << "   Funciones:\n"; 
-        cout <<"====================";
+        cout <<"====================\n";
         for (size_t i = 0; i < funciones.size(); ++i) {
             funciones[i].mostrarFuncion();
             cout << "-----------------------------\n";
         }
     };
-
+    //Se agrega la pelicula al vector
     void agregarPelicula(Pelicula p) {
     peliculas.push_back(p);
     }
-
+    //Se agrega la Funcion al vector
     void agregarFuncion(Funcion f) {
         funciones.push_back(f);
     }
-
+    //Se obtiene el objeto Funcion a partir de un id
     Funcion seleccionarFuncionById(int idFuncion){
         for(size_t i = 0; i < funciones.size(); i++){
             if(idFuncion == funciones[i].getId()){
@@ -70,6 +70,25 @@ public:
             }
         }
         return Funcion();
+    }
+    //Se obtiene el objeto Sala original
+    Sala& obtenerSalaDeFuncion(int idFuncion){
+        for(auto &f : funciones){
+            if(f.getId() == idFuncion){
+                return f.getSala();
+            }
+            
+        }
+        throw runtime_error("Funcion no encontrada");
+    }
+
+    bool verificarFuncionEnCine(int idFuncion){
+        for(size_t i = 0; i < funciones.size(); i++){
+            if(idFuncion == funciones[i].getId()){
+                return true;
+            }
+        }
+        return false;
     }
     
 };

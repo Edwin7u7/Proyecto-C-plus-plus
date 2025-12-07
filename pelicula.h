@@ -21,7 +21,7 @@ class Pelicula{
         ): idPelicula(idPelicula), horarios(horarios), descripcion(descripcion),nombre(nombre)
         {}
         
-        //GETTERS
+        //Getters
         
         string getNombre() const { return nombre; }
         vector<string> getHorarios() const { return horarios; }

@@ -9,19 +9,19 @@ using namespace std;
 
 class Boleto {
 protected:
-    int idBoleto;
     Pelicula pelicula;
     string horario;
     Sala sala;
     Asiento asiento;
 
 public:
+    //Constructores
     Boleto() {}
 
-    Boleto(int idBoleto, Pelicula pelicula, string horario, Sala sala, Asiento asiento)
-        : idBoleto(idBoleto), pelicula(pelicula), horario(horario), sala(sala), asiento(asiento)
+    Boleto(Pelicula pelicula, string horario, Sala sala, Asiento asiento)
+        : pelicula(pelicula), horario(horario), sala(sala), asiento(asiento)
     {}
-
+    //Metodo que heredan las clases Vip y Estandar
     virtual void mostrarBoleto() = 0;
 };
 

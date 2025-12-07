@@ -6,19 +6,22 @@ class Asiento{
         int columna;
         bool disponible;
     public:
+        //Constructores
         Asiento(){};
         Asiento(int fila, int columna , int disponible):
         fila(fila),columna(columna),disponible(disponible)
         {};
+        //Metodos
 
+        //Se usa para verificar si esta disponible o no al momento de mostrar los aisentos
         bool estaDisponible() const {
             return disponible;
         }
-
+        //Se usa para cambiar el status del asiento de disponible a ocupado
         void ocupar(){
             disponible = false;
         }
-
+        //Getters
         int getFila(){
             return fila;
         };

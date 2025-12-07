@@ -8,17 +8,17 @@ class Estandar : public Boleto{
         
         float precio;
     public:
+        //Constructores
         Estandar()
         : precio(90.0f){}
 
-        Estandar(int idBoleto, Pelicula pelicula, string horario, Sala sala, 
+        Estandar(Pelicula pelicula, string horario, Sala sala, 
                 Asiento asiento)
-            : Boleto(idBoleto, pelicula, horario, sala, asiento), precio(90.0f)
+            : Boleto(pelicula, horario, sala, asiento), precio(90.0f)
         {}
-
+        //Este metodo es el que hereda de la clase Boleto
         void mostrarBoleto()override{
              cout << "\n------ BOLETO ESTANDAR ------\n";
-            cout << "ID: " << idBoleto << endl;
             cout << "Pelicula: " << pelicula.getNombre() << endl;
             cout << "Horario: " << horario << endl;
             cout << "Sala: " << sala.getSalaId() << endl;

@@ -8,19 +8,19 @@ class Vip :public Boleto{
         string beneficios;
         float precio;
     public:
+        //Constructores
         Vip()
         : precio(180.0f), beneficios("Incluye asiento premium + palomitas grandes") {}
 
-        Vip(int idBoleto, Pelicula pelicula, string horario, Sala sala, 
+        Vip( Pelicula pelicula, string horario, Sala sala, 
                 Asiento asiento)
-            : Boleto(idBoleto, pelicula, horario, sala, asiento),
+            : Boleto(pelicula, horario, sala, asiento),
             precio(180.0f),
             beneficios("Incluye asiento premium + palomitas grandes")
         {}
-
+        //Este metodo es el que hereda de la clase Boleto
         void mostrarBoleto() override{
              cout << "\n------ BOLETO VIP ------\n";
-            cout << "ID: " << idBoleto << endl;
             cout << "Pelicula: " << pelicula.getNombre() << endl;
             cout << "Horario: " << horario << endl;
             cout << "Sala: " << sala.getSalaId() << endl;
