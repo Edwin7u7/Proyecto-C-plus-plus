@@ -31,11 +31,9 @@ El usuario podrá:
 
 3-Elegir una función específica.
 
-4-Elegir una sala asignada a esa función.
+4-Seleccionar un asiento disponible.
 
-5-Seleccionar un asiento disponible.
-
-6-Confirmar su boleto, mostrando información como:
+5-Confirmar su boleto, mostrando información como:
 
 -Nombre de la película
 
@@ -44,8 +42,6 @@ El usuario podrá:
 -Sala
 
 -Asiento
-
--Identificador de boleto
 
 ****Clases del programa******
 -Cine 
