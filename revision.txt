@@ -1,15 +1,19 @@
-Componente: Cumple con estándares en mi repositorio: tiene un readme claro que explica el proyecto  (para que sirve,  para que no sirve y como se usa), no tiene archivos basura o versiones pasadas.
-Avance 1
+Componente: Sigo estándares en todo mi código fuente: estilo, sangrías, comentarios, nombres, etc... Avance 3
 
-Retro: Es capaz de crear un repositorio y un README.md. No cuenta con instrucciones para el compilado y ejecución de su proyecto. Para revisiones adunta un archivo revision.txt con lo que quieres que se re-evalue en tu proxima entrega.
+Retro: Hace uso parcial de estandares de código (comentarios irregulares).
 
-Cambio: Se actualizó el archivo README con las instrucciones de compilado y ejecución
+Cambio: Se agregaron los respectivos comentarios en cada archivo.
 
 
-Componente: Utilizo el concepto de herencia en el diagrama de clases de manera adecuada.
-Avance 2
+Componente: Implemento las clases en c++ siguiendo el diseño del diagrama de clases en UML. Avance 3
 
-Retro: Es capaz de modelar usando UML. Usa flechas adicionales para indicar composición y agregación que confunden al espectador, utiliza solo una cabeza de flecha por relación. No hace uso de herencia en su UML.
-Para revisiones adunta un archivo revision.txt con lo que quieres que se re-evalue en tu proxima entrega.
+Retro: Sus diagrama UML no tiene concordancia con su código (metodos faltantes en algunas clases en su diagrama)
 
-Cambio: Se actualizó el diagrama UML (flechas y herencia correspondiente).
+Cambio: Se modifico el uml y el codigo agregando los metodos faltantes para que tuvieran concordancia.
+
+
+Componente:  Implemento clases apegadas a requerimientos a partir de un modelo. Avance 3
+
+Retro: Sus diagrama UML no tiene concordancia con su código (metodos faltantes en algunas clases en su diagrama)
+
+Cambio: Se modifico el uml y el codigo agregando los metodos faltantes para que tuvieran concordancia.
